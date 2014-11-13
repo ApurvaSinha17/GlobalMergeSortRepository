@@ -19,7 +19,10 @@ public class MainClass {
 		}
 
 		MergeSort mergeSort = new MergeSort();
-		a = mergeSort.sort(a);
+		//a = mergeSort.sort(a);
+		
+		//Bottom-Up Merge Sort implementation
+		a = mergeSort.bottomUpSort(a);
 		
 		System.out.println("Sorted array");
 		for(int i=0;i<arrayLength;i++){

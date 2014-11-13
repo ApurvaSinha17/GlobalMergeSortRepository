@@ -84,4 +84,18 @@ public class MergeSort {
 			}
 		}
 	}
+	
+	//Code for Bottom-Up Merge Sort
+	public int[] bottomUpSort(int[] a){
+		
+		int aLen = a.length;
+		int [] aux = new int[aLen];
+		for(int sz=1;sz<aLen;sz=sz*2){
+			for(int i=0;i<aLen-sz;i+=sz*2){
+				merge(a,aux,i,i+sz-1,Math.min(i+sz*2-1, aLen-1));
+			}
+		}
+		return a;
+	}
+	
 }
